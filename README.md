@@ -1,12 +1,108 @@
-# React + Vite
+# CinePlix Movies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Movie Explorer web application with role-based authentication, built with React (frontend) and Node.js/Express/MongoDB (backend).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+- **Frontend:** [https://roaring-llama-0da037.netlify.app/]
+- **Backend API:** [http://localhost:8080]
+- **GitHub Repo:** [https://github.com/sand000/propFtx-assignment]
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+---
+
+## 📸 Screenshots
+
+### Admin Dashboard
+[![Admin-Dashboard.png](https://i.postimg.cc/zBMqWN3c/Admin-Dashboard.png)](https://postimg.cc/S260Fw66)
+
+### Login Page
+[![Login.png](https://i.postimg.cc/kgc6SVCY/Login.png)](https://postimg.cc/DSSwkw81)
+
+### User Dashboard
+[![User-Dashboard.png](https://i.postimg.cc/ZK6yT7MS/User-Dashboard.png)](https://postimg.cc/fJTbCKs2)
+
+---
+
+## ✨ Features
+- User authentication (Signup/Login)
+- Role-based access (Admin/User)
+- Admin can add, edit, and delete movies
+- Users can view, search, and filter movies by genre
+- Users can like/favorite movies (local state)
+- Responsive, modern UI with Material-UI
+- JWT-based authentication
+- MongoDB for persistent storage
+
+---
+
+## 🗂️ Project Structure
+```
+CinePlix Movies/
+  backend/    # Node.js/Express/MongoDB API
+  frontend/   # React + Vite frontend
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```powershell
+https://github.com/badrisinghoo7/CeneplixMovies.git
+```
+
+### 2. Install dependencies
+#### Backend
+```powershell
+cd backend
+npm install
+```
+#### Frontend
+```powershell
+cd ../frontend
+npm install
+```
+
+### 3. Environment Variables
+- Create a `.env` file in `backend/` with:
+  ```env
+  MONGODBURI=your_mongodb_connection_string
+  JWTSECRET=your_jwt_secret
+  PORT=your_port
+  ```
+
+### 4. Run the application locally
+#### Backend
+```powershell
+cd backend
+npm run server
+```
+#### Frontend
+```powershell
+cd ../frontend
+npm run dev
+```
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React, Vite, TailwindCss
+- **Backend:** Node.js, Express, MongoDB, Mongoose, JWT
+
+---
+
+## 🔑 Admin Panel Credentials
+- **Email:** admin@gmail.com
+- **Password:** admin
+
+---
+
+## 🙏 Acknowledgements
+- [Tailwind.Css]
+- [Vite](https://vitejs.dev/)
+- [MongoDB](https://www.mongodb.com/)
+
+---

@@ -78,8 +78,7 @@ export default function UserDashboard({ search, setSearch }) {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <h2 className="text-4xl font-bold text-center text-blue-700 mb-8 tracking-tight">🎬 Movie Explorer</h2>
+    <div className="max-w-7xl mx-auto px-4 py-8 font-sans">
 
       {/* Mobile Search */}
       <div className="block md:hidden mb-6">
@@ -87,29 +86,29 @@ export default function UserDashboard({ search, setSearch }) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search movies..."
-          className="w-full px-4 py-2 rounded-lg border border-blue-300 bg-blue-50 text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full px-4 py-2 rounded-lg border border-orange-300 bg-orange-50 text-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
       </div>
 
       {/* Movies per page */}
-      <div className="flex justify-end mb-4">
-        <label className="text-blue-700 font-medium mr-2" htmlFor="moviesPerPage">
+      {/* <div className="flex justify-end mb-4">
+        <label className="text-orange-700 font-medium mr-2" htmlFor="moviesPerPage">
           Movies per page:
         </label>
         <select
           id="moviesPerPage"
           value={moviesPerPage}
           onChange={(e) => setMoviesPerPage(Number(e.target.value))}
-          className="px-3 py-1 rounded-md border border-blue-300 bg-blue-50 text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="px-3 py-1 rounded-md border border-orange-300 bg-orange-50 text-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-400"
         >
           {[5, 10, 15, 20].map((num) => (
             <option key={num} value={num}>{num}</option>
           ))}
         </select>
-      </div>
+      </div> */}
 
       {/* Genre Filters */}
-      {showFilter && (
+      {/* {showFilter && (
         <div className="flex flex-wrap gap-2 justify-center mb-4">
           {genres.map((g) => (
             <button
@@ -117,8 +116,8 @@ export default function UserDashboard({ search, setSearch }) {
               onClick={() => handleGenreChange(g)}
               className={`px-3 py-1 rounded-full border text-sm font-medium transition
                 ${genre.includes(g)
-                  ? 'bg-blue-600 text-white border-blue-600'
-                  : 'bg-blue-100 text-blue-700 border-blue-200 hover:bg-blue-200'}
+                  ? 'bg-orange-600 text-white border-orange-600'
+                  : 'bg-orange-100 text-orange-700 border-orange-200 hover:bg-orange-200'}
               `}
             >
               {g}
@@ -133,31 +132,31 @@ export default function UserDashboard({ search, setSearch }) {
             </button>
           )}
         </div>
-      )}
+      )} */}
 
       {/* Genre Chips */}
-      {genre.length > 0 && (
+      {/* {genre.length > 0 && (
         <div className="flex flex-wrap gap-2 justify-center mb-6">
           {genre.map((g) => (
             <span
               key={g}
-              className="flex items-center bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold"
+              className="flex items-center bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold"
             >
               {g}
               <button
                 onClick={() => handleGenreChange(g)}
-                className="ml-2 text-blue-900 hover:text-blue-600"
+                className="ml-2 text-orange-900 hover:text-orange-600"
               >
                 &times;
               </button>
             </span>
           ))}
         </div>
-      )}
+      )} */}
 
       {/* Movie Cards */}
       {filtered.length === 0 ? (
-        <div className="text-center text-blue-500 font-medium text-lg mt-16">
+        <div className="text-center text-orange-500 font-medium text-lg mt-16">
           No movies found.
         </div>
       ) : (
@@ -171,10 +170,10 @@ export default function UserDashboard({ search, setSearch }) {
                     <button
                       onClick={() => handleLike(movie._id)}
                       className={`text-2xl transition ${
-                        liked[movie._id] ? 'text-blue-600' : 'text-blue-300 hover:text-blue-600'
+                        liked[movie._id] ? 'text-orange-600' : 'text-orange-300 hover:text-orange-600'
                       }`}
                     >
-                      {liked[movie._id] ? '💙' : '🤍'}
+                      {liked[movie._id] ? '🧡' : '🤍'}
                     </button>
                   }
                 />
@@ -188,7 +187,7 @@ export default function UserDashboard({ search, setSearch }) {
               <button
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
-                className="px-4 py-2 rounded-md bg-blue-100 text-blue-700 hover:bg-blue-200 transition disabled:opacity-50"
+                className="px-4 py-2 rounded-md bg-orange-100 text-orange-700 hover:bg-orange-200 transition disabled:opacity-50"
               >
                 Prev
               </button>
@@ -198,8 +197,8 @@ export default function UserDashboard({ search, setSearch }) {
                   onClick={() => setCurrentPage(idx + 1)}
                   className={`px-4 py-2 rounded-md font-medium transition ${
                     currentPage === idx + 1
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                      ? 'bg-orange-600 text-white'
+                      : 'bg-orange-100 text-orange-700 hover:bg-orange-200'
                   }`}
                 >
                   {idx + 1}
@@ -208,7 +207,7 @@ export default function UserDashboard({ search, setSearch }) {
               <button
                 onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages}
-                className="px-4 py-2 rounded-md bg-blue-100 text-blue-700 hover:bg-blue-200 transition disabled:opacity-50"
+                className="px-4 py-2 rounded-md bg-orange-100 text-orange-700 hover:bg-orange-200 transition disabled:opacity-50"
               >
                 Next
               </button>
@@ -221,12 +220,12 @@ export default function UserDashboard({ search, setSearch }) {
       {snackbar.open && (
         <div
           className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-md shadow-md text-white font-medium z-50
-            ${snackbar.severity === 'success' ? 'bg-green-600' : 'bg-blue-500'}
+            ${snackbar.severity === 'success' ? 'bg-orange-600' : 'bg-orange-500'}
           `}
         >
           {snackbar.message}
           <button
-            className="ml-4 text-lg hover:text-gray-300"
+            className="ml-4 text-lg hover:text-orange-200"
             onClick={handleCloseSnackbar}
           >
             &times;

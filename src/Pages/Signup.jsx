@@ -32,74 +32,88 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
-      <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md border border-blue-200">
-        <h2 className="text-3xl font-bold text-center text-blue-700 mb-6 tracking-wide">Signup</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-orange-100 to-orange-200 px-4">
+      <div className="bg-white rounded-3xl shadow-2xl p-10 max-w-md w-full border border-orange-300">
+        <h2 className="text-4xl font-extrabold text-center text-orange-600 mb-8 tracking-tight drop-shadow-md">
+          Create Account
+        </h2>
+
         {error && (
-          <div className="mb-4 bg-blue-50 border border-blue-300 text-blue-700 px-4 py-2 rounded text-center">
+          <div className="mb-6 bg-orange-100 border border-orange-300 text-orange-700 px-5 py-3 rounded-lg text-center font-semibold animate-shake">
             {error}
           </div>
         )}
         {success && (
-          <div className="mb-4 bg-blue-50 border border-blue-300 text-blue-700 px-4 py-2 rounded text-center">
+          <div className="mb-6 bg-green-100 border border-green-300 text-green-700 px-5 py-3 rounded-lg text-center font-semibold">
             {success}
           </div>
         )}
-        <form onSubmit={handleSubmit} className="space-y-5">
+
+        <form onSubmit={handleSubmit} className="space-y-7">
           <div>
-            <label className="block text-sm font-semibold text-blue-700 mb-1" htmlFor="name">
+            <label
+              htmlFor="name"
+              className="block text-sm font-semibold text-orange-700 mb-2 tracking-wide"
+            >
               Name
             </label>
             <input
               id="name"
               type="text"
               name="name"
-              placeholder="Enter your name"
+              placeholder="Your full name"
               value={form.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded border border-blue-200 bg-blue-50 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
+              className="w-full px-5 py-3 rounded-xl border border-orange-300 bg-orange-50 text-orange-900 placeholder-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300 transition shadow-sm"
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-blue-700 mb-1" htmlFor="email">
-              Email
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold text-orange-700 mb-2 tracking-wide"
+            >
+              Email Address
             </label>
             <input
               id="email"
               type="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="you@example.com"
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded border border-blue-200 bg-blue-50 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
+              className="w-full px-5 py-3 rounded-xl border border-orange-300 bg-orange-50 text-orange-900 placeholder-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300 transition shadow-sm"
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-blue-700 mb-1" htmlFor="password">
+            <label
+              htmlFor="password"
+              className="block text-sm font-semibold text-orange-700 mb-2 tracking-wide"
+            >
               Password
             </label>
             <input
               id="password"
               type="password"
               name="password"
-              placeholder="Enter your password"
+              placeholder="••••••••"
               value={form.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded border border-blue-200 bg-blue-50 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
+              className="w-full px-5 py-3 rounded-xl border border-orange-300 bg-orange-50 text-orange-900 placeholder-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300 transition shadow-sm"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-2 rounded bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg transition shadow"
+            className="w-full cursor-pointer py-3 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-extrabold text-lg hover:from-orange-600 hover:to-orange-700 shadow-lg transition"
           >
-            Signup
+            Sign Up
           </button>
         </form>
+
         <button
-          className="w-full mt-4 text-blue-600 hover:underline font-semibold"
+          className="w-full mt-8 text-orange-700 font-semibold hover:text-orange-900 hover:underline transition cursor-pointer"
           onClick={() => navigate('/')}
           type="button"
         >
