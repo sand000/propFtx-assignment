@@ -1,4 +1,4 @@
-# CinePlix Movies
+# Cinema
 
 A full-stack Movie Explorer web application with role-based authentication, built with React (frontend) and Node.js/Express/MongoDB (backend).
 
@@ -40,7 +40,7 @@ A full-stack Movie Explorer web application with role-based authentication, buil
 
 ## 🗂️ Project Structure
 ```
-CinePlix Movies/
+Cinema Movies/
   backend/    # Node.js/Express/MongoDB API
   frontend/   # React + Vite frontend
 ```
