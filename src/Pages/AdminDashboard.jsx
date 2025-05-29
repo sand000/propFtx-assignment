@@ -21,7 +21,6 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     fetchMovies();
-    // eslint-disable-next-line
   }, []);
 
   const handleOpen = (movie = null) => {
@@ -80,22 +79,6 @@ export default function AdminDashboard() {
       >
         <span className="text-xl">＋</span> Add Movie
       </button>
-      {/* Movies per page filter */}
-      {/* <div className="flex justify-end mb-4">
-        <label className="mr-2 font-semibold text-blue-700" htmlFor="moviesPerPage">
-          Movies per page:
-        </label>
-        <select
-          id="moviesPerPage"
-          value={moviesPerPage}
-          onChange={e => setMoviesPerPage(Number(e.target.value))}
-          className="px-3 py-1 rounded border border-blue-300 bg-blue-50 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
-        >
-          {[5, 10, 15, 20].map(num => (
-            <option key={num} value={num}>{num}</option>
-          ))}
-        </select>
-      </div> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {paginatedMovies.map((movie) => (
           <div key={movie._id} className="flex flex-col items-center w-full">

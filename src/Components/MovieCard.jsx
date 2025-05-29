@@ -12,9 +12,6 @@ export default function MovieCard({ movie, action }) {
           loading="lazy"
           decoding="async"
         />
-        {/* <div className="absolute top-3 right-3 z-20 bg-white bg-opacity-90 backdrop-blur-md rounded-full p-1 shadow-sm transition-opacity duration-300 opacity-80 hover:opacity-100">
-          {action}
-        </div> */}
       </div>
 
       {/* Content */}
@@ -26,16 +23,6 @@ export default function MovieCard({ movie, action }) {
         >
           {movie.title}
         </h3>
-
-        {/* Tags */}
-        {/* <div className="flex flex-wrap gap-2 mb-4">
-          <span className="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full">
-            {movie.genre}
-          </span>
-          <span className="bg-orange-200 text-orange-900 text-sm font-medium px-3 py-1 rounded-full">
-            {movie.releaseYear}
-          </span>
-        </div> */}
 
         {/* Description */}
         <p className="text-base text-orange-800  leading-relaxed line-clamp-3" aria-label={movie.description}>
