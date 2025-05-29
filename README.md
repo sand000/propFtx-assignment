@@ -27,3 +27,5 @@ A full-stack movie listing application with secure authentication, built using t
 ```bash
 git clone https://github.com/sand000/propFtx-assignment.git
 cd cinema-movie-app
+npm install
+npm run dev
