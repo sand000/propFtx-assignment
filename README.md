@@ -20,7 +20,7 @@ A full-stack movie listing application with secure authentication, built using t
 
 👉 [View Live App](https://roaring-llama-0da037.netlify.app/)
 
-## 📦 Installation (Frontend + Backend)
+## 📦 Installation (Frontend)
 
 ### 1. Clone the repository
 
@@ -29,3 +29,5 @@ git clone https://github.com/sand000/propFtx-assignment.git
 cd cinema-movie-app
 npm install
 npm run dev
+
+
