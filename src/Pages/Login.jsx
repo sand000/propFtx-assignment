@@ -33,10 +33,10 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-orange-100 to-orange-200 px-4">
-      <div className="rounded-3xl shadow-2xl p-10 max-w-md w-full border bg-white border-orange-300">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4">
+      <div className=" shadow-2xl p-10 max-w-md w-full border bg-white border-orange-300">
         <h2 className="text-4xl font-extrabold text-center text-orange-600 mb-8 tracking-tight drop-shadow-md">
-          Welcome Back!
+          Sign In
         </h2>
         {error && (
           <div className="mb-6 bg-orange-100 border border-orange-300 text-orange-700 px-5 py-3 rounded-lg text-center font-semibold animate-shake">
@@ -47,7 +47,7 @@ export default function Login() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-semibold text-orange-700 mb-2 tracking-wide"
+              className="block text-start text-sm font-semibold text-orange-700 mb-2 tracking-wide"
             >
               Email Address
             </label>
@@ -65,7 +65,7 @@ export default function Login() {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-semibold text-orange-700 mb-2 tracking-wide"
+              className="block text-start text-sm font-semibold text-orange-700 mb-2 tracking-wide"
             >
               Password
             </label>
@@ -73,7 +73,7 @@ export default function Login() {
               id="password"
               type="password"
               name="password"
-              placeholder="••••••••"
+              placeholder="password"
               value={form.password}
               onChange={handleChange}
               required

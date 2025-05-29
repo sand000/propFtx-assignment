@@ -32,10 +32,10 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-orange-100 to-orange-200 px-4">
-      <div className="bg-white rounded-3xl shadow-2xl p-10 max-w-md w-full border border-orange-300">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4">
+      <div className="bg-white  shadow-2xl p-10 max-w-md w-full border border-orange-300">
         <h2 className="text-4xl font-extrabold text-center text-orange-600 mb-8 tracking-tight drop-shadow-md">
-          Create Account
+          Register User
         </h2>
 
         {error && (
@@ -53,7 +53,7 @@ export default function Signup() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-semibold text-orange-700 mb-2 tracking-wide"
+              className="block text-sm font-semibold text-orange-700 mb-2 text-start"
             >
               Name
             </label>
@@ -71,7 +71,7 @@ export default function Signup() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-semibold text-orange-700 mb-2 tracking-wide"
+              className="block text-start text-sm font-semibold text-orange-700 mb-2 tracking-wide"
             >
               Email Address
             </label>
@@ -89,7 +89,7 @@ export default function Signup() {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-semibold text-orange-700 mb-2 tracking-wide"
+              className="block text-start text-sm font-semibold text-orange-700 mb-2 tracking-wide"
             >
               Password
             </label>
@@ -97,7 +97,7 @@ export default function Signup() {
               id="password"
               type="password"
               name="password"
-              placeholder="••••••••"
+              placeholder="password"
               value={form.password}
               onChange={handleChange}
               required
